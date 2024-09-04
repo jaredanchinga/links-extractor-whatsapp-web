@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhatsApp Link Collector</title>
+  <style>
+    body { width: 400px; font-family: Arial, sans-serif; margin: 0; padding: 10px; }
+    .button-container { 
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin: -10px -10px 10px -10px;
+      text-align: right;
+    }
+    button { 
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background-color: #45a049; }
+    h2 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button id="clearLinks">Clear Links</button>
+    <button id="exportCSV">Export CSV</button>
+    <button id="openFullPage">Open Full Page</button>
+  </div>
+  <h2>Collected Links</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="linkList"></tbody>
+  </table>
+  <script src="popup.js"></script>
+</body>
+</html>

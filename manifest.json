@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2.1,
+    "name": "WhatsApp Link Collector",
+    "version": "1.0",
+    "description": "Collects links from WhatsApp Web chats",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "*://web.whatsapp.com/*"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://web.whatsapp.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+      "full-page.html"
+    ]
+  }
